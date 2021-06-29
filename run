@@ -1,0 +1,8 @@
+./phgl_generator.py -i ./main_zqh.py -m module_test -o ./
+#./phgl_generator.py -i ./phgl_utils/mux.py -m mux1h3 -o module_test.v
+#./phgl_generator.py -i ./phgl_utils/dff_delay.py -m dff_s_delay -o module_test.v
+#./phgl_generator.py -i ./phgl_utils/sfifo.py -m sfifo_regs -o module_test.v
+#./phgl_generator.py -i ./phgl_utils/sfifo.py -m sfifo_regs_vijay0 -o module_test.v
+#./phgl_generator.py -i ./phgl_utils/arbiter.py -m rr_arbiter -o module_test.v
+#./phgl_generator.py -i ./phgl_utils/fifo.py -m afifo_regs_vijay1 -o module_test.v
+#./phgl_generator.py -i ./phgl_utils/fifo.py -m afifo_regs_vijay2 -o module_test.v

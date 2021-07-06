@@ -29,7 +29,12 @@ module clock_divider_sim #(
         clock_t0 = clock_t1;
         clock_t1 = $realtime;
         clock_cycle = clock_t1 - clock_t0;
-        clock_out_cycle = clock_cycle * io_div;
+        if ($isunknown(io_div)) begin
+            clock_out_cycle = clock_cycle;
+        end
+        else begin
+            clock_out_cycle = clock_cycle * io_div;
+        end
     end
 
     initial begin

@@ -35,7 +35,12 @@ module pll_sim #(
         clock_t0 = clock_t1;
         clock_t1 = $realtime;
         clock_cycle = clock_t1 - clock_t0;
-        clock_out_cycle = clock_cycle/io_mul;
+        if ($isunknown(io_mul)) begin
+            clock_out_cycle = clock_cycle;
+        end
+        else begin
+            clock_out_cycle = clock_cycle/io_mul;
+        end
     end
 
     always @(posedge io_clock_ref) begin

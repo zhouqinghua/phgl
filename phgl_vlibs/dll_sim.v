@@ -78,7 +78,7 @@ module dll_sim #(
     
     real delay_cycles;
     always @(*) begin
-        if (check_is_xz(io_adj, $size(io_adj)) || check_is_xz(io_madj, $size(io_madj))) begin
+        if ($isunknown(io_adj) || $isunknown(io_madj)) begin
             delay_cycles = 0.0;
         end
         else begin
